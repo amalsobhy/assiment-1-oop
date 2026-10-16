@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read unit price (double) and quantity (int)
+        double unitPrice = scanner.nextDouble();
+        int quantity = scanner.nextInt();
+
+        // Declare the tax rate constant
+        final double TAX_RATE = 0.14;
+
+        // Calculate subtotal, tax, and total
+        double subtotal = unitPrice * quantity;
+        double tax = subtotal * TAX_RATE;
+        double total = subtotal + tax;
+
+        // Print the results formatted to two decimal places
+        System.out.printf("Subtotal = %.2f, Tax = %.2f, Total = %.2f%n", subtotal, tax, total);
+
+        scanner.close();
+    }
+}
