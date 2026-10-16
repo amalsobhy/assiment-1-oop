@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class ScoreAverageCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read three integer scores
+        System.out.print("Enter three integer scores: ");
+        int score1 = scanner.nextInt();
+        int score2 = scanner.nextInt();
+        int score3 = scanner.nextInt();
+        
+        // Calculate the average as a double to preserve decimal precision
+        double average = (score1 + score2 + score3) / 3.0;
+        
+        // Round to the nearest whole number using Math.round
+        long roundedAverage = Math.round(average);
+        
+        // Print the rounded whole number
+        System.out.println(roundedAverage);
+        
+        // Print the average with two decimal places
+        System.out.printf("%.2f\n", average);
+        
+        scanner.close();
+    }
+}
